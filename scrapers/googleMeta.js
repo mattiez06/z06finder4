@@ -26,12 +26,8 @@ export async function fetchGoogleMeta(query = {}) {
         title: it.title || 'Listing',
         url: it.link,
         thumbnail: thumb,
-        price: null,
-        year: null,
-        mileage: null,
-        location: '',
-        transmission: '',
-        salvage: false,
+        price: null, year: null, mileage: null, location: '',
+        transmission: '', salvage: false,
         postedAt: new Date().toISOString(),
         description: it.snippet || ''
       };
