@@ -1,4 +1,3 @@
-
 import fetch from 'node-fetch';
 import { parseStringPromise } from 'xml2js';
 
@@ -18,13 +17,10 @@ export async function fetchBAT(query = {}) {
       })
       .map((it, i) => {
         const desc = it?.description?.[0] || it?.['content:encoded']?.[0] || '';
-        // Try media tags first
-        let thumb =
+        const thumb =
           it?.['media:content']?.[0]?.$?.url ||
           it?.['media:thumbnail']?.[0]?.$?.url ||
-          // Fallback: first <img src="..."> in the description HTML
           (desc.match(/<img[^>]+src="([^"]+)"/i)?.[1] || '');
-
         return {
           id: `bat-${i}`,
           source: 'Bring a Trailer',
@@ -46,8 +42,5 @@ export async function fetchBAT(query = {}) {
     return [];
   }
 }
+function guessYear(title){ const m=title.match(/\b(200[5-9]|201[0-3])\b/); return m?Number(m[0]):null; }
 
-function guessYear(title) {
-  const m = title.match(/\b(200[5-9]|201[0-3])\b/);
-  return m ? Number(m[0]) : null;
-}
