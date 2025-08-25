@@ -16,3 +16,5 @@ body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;color:#111;background:
 .pager{display:flex;justify-content:center;align-items:center;gap:12px;margin:18px 0}
 .pager button{padding:8px 12px;border-radius:10px;border:1px solid #ccc;background:#fff;cursor:pointer}
 .ghost{background:#fff;color:#111;border:1px solid #ccc}
+.thumb{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;display:block}
+
