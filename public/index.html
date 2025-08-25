@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Z06 Finder — Ultimate</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<main class="container">
+  <h1>Z06 Finder — Ultimate</h1>
+  <p class="muted">Search Z06 listings from eBay / Bring a Trailer / site-restricted Google.</p>
+
+  <section class="toolbar">
+    <input id="q" placeholder="Search (e.g., cam, black, MN)"/>
+    <input id="location" placeholder="Location"/>
+    <input id="minYear" type="number" placeholder="Min Year"/>
+    <input id="maxYear" type="number" placeholder="Max Year"/>
+    <input id="minPrice" type="number" placeholder="Min Price"/>
+    <input id="maxPrice" type="number" placeholder="Max Price"/>
+    <select id="source">
+      <option value="">All</option>
+      <option value="ebay">eBay</option>
+      <option value="bat">BaT</option>
+      <option value="google">Google</option>
+    </select>
+    <label class="cb"><input type="checkbox" id="vinOnly"/> VIN-confirmed Z06 only</label>
+    <button id="searchBtn">Search</button>
+    <a id="csvLink" class="ghost" href="/api/listings.csv" target="_blank">Export CSV</a>
+  </section>
+
+  <section id="stats" class="muted"></section>
+  <section id="grid" class="grid"></section>
+
+  <section class="pager">
+    <button id="prevBtn" class="ghost">Prev</button>
+    <span id="pageInfo">Page 1</span>
+    <button id="nextBtn" class="ghost">Next</button>
+  </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>
