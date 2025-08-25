@@ -1,0 +1,1 @@
+export function isC6Z06Vin(v){if(typeof v!=='string')return false;v=v.trim().toUpperCase();if(v.length!==17)return false;if(!v.startsWith('1G1YY26E'))return false;const y=v[9];return new Set(['6','7','8','9','A','B','C','D']).has(y);}
