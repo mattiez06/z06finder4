@@ -1,0 +1,18 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;color:#111;background:#fafafa}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.muted{color:#666}.small{font-size:.9rem}
+.toolbar{display:grid;grid-template-columns:repeat(6,1fr) 1fr 1fr;gap:8px;margin:16px 0}
+.toolbar input,.toolbar select,.toolbar a{padding:10px;border:1px solid #ddd;border-radius:10px;background:#fff;text-decoration:none;color:#111}
+.toolbar button{padding:10px 14px;border:1px solid #111;background:#111;color:#fff;border-radius:12px;cursor:pointer}
+.cb{display:flex;align-items:center;gap:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{border:1px solid #e5e5e5;border-radius:14px;background:#fff;overflow:hidden}
+.pad{padding:12px}
+.thumb{aspect-ratio:16/9;width:100%;object-fit:cover;background:#eee}
+.title{font-weight:600;margin:0 0 6px 0}
+.price{font-weight:700}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.pager{display:flex;justify-content:center;align-items:center;gap:12px;margin:18px 0}
+.pager button{padding:8px 12px;border-radius:10px;border:1px solid #ccc;background:#fff;cursor:pointer}
+.ghost{background:#fff;color:#111;border:1px solid #ccc}
