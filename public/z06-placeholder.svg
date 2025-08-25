@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 338">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f1f2a"/><stop offset="1" stop-color="#2a2230"/></linearGradient></defs>
+  <rect width="600" height="338" rx="14" fill="url(#g)"/>
+  <g opacity=".8">
+    <path d="M40 260c80-60 180-90 260-90 40 0 80 10 120 30" stroke="#ff3131" stroke-width="6" fill="none" opacity=".7"/>
+    <path d="M560 160c-60 50-200 100-320 120" stroke="#ff7a18" stroke-width="6" fill="none" opacity=".6"/>
+  </g>
+  <text x="40" y="80" fill="#fff" font-size="28" font-family="system-ui,Segoe UI,Roboto,Arial">Z06 Listing</text>
+</svg>
