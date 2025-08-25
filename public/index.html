@@ -7,38 +7,63 @@
   <link rel="stylesheet" href="/styles.css"/>
 </head>
 <body>
+<header class="hero">
+  <div class="hero-overlay"></div>
+  <nav class="topbar">
+    <div class="brand">
+      <img src="/logo.svg" class="logo" alt="Z06 Finder"/>
+      <span class="brand-name">Z06 Finder</span>
+    </div>
+  </nav>
+  <div class="hero-inner">
+    <h1>Find Your Next Z06</h1>
+    <p class="tag">Live listings from BaT, eBay, FB Marketplace (via Google), and more.</p>
+    <a href="#search" class="cta">Start Searching</a>
+  </div>
+</header>
+
 <main class="container">
-  <h1>Z06 Finder — Ultimate</h1>
-  <p class="muted">Search Z06 listings from eBay / Bring a Trailer / site-restricted Google.</p>
+  <section id="search" class="panel">
+    <h2 class="section-title">Search Listings</h2>
+    <p class="muted small">Tip: try keywords like <em>cam</em>, <em>black</em>, <em>MN</em>, <em>no reserve</em>.</p>
 
-  <section class="toolbar">
-    <input id="q" placeholder="Search (e.g., cam, black, MN)"/>
-    <input id="location" placeholder="Location"/>
-    <input id="minYear" type="number" placeholder="Min Year"/>
-    <input id="maxYear" type="number" placeholder="Max Year"/>
-    <input id="minPrice" type="number" placeholder="Min Price"/>
-    <input id="maxPrice" type="number" placeholder="Max Price"/>
-    <select id="source">
-      <option value="">All</option>
-      <option value="ebay">eBay</option>
-      <option value="bat">BaT</option>
-      <option value="google">Google</option>
-    </select>
-    <label class="cb"><input type="checkbox" id="vinOnly"/> VIN-confirmed Z06 only</label>
-    <button id="searchBtn">Search</button>
-    <a id="csvLink" class="ghost" href="/api/listings.csv" target="_blank">Export CSV</a>
-  </section>
+    <section class="toolbar">
+      <input id="q" placeholder="Search (e.g., cam, black, MN)"/>
+      <input id="location" placeholder="Location"/>
+      <input id="minYear" type="number" placeholder="Min Year"/>
+      <input id="maxYear" type="number" placeholder="Max Year"/>
+      <input id="minPrice" type="number" placeholder="Min Price"/>
+      <input id="maxPrice" type="number" placeholder="Max Price"/>
+      <select id="source">
+        <option value="">All</option>
+        <option value="ebay">eBay</option>
+        <option value="bat">BaT</option>
+        <option value="google">Google</option>
+      </select>
+      <label class="cb"><input type="checkbox" id="vinOnly"/> VIN-confirmed Z06 only</label>
+      <button id="searchBtn">Search</button>
+      <a id="csvLink" class="ghost" href="/api/listings.csv" target="_blank">Export CSV</a>
+    </section>
 
-  <section id="stats" class="muted"></section>
-  <section id="grid" class="grid"></section>
+    <section id="stats" class="muted"></section>
+    <section id="grid" class="grid"></section>
 
-  <section class="pager">
-    <button id="prevBtn" class="ghost">Prev</button>
-    <span id="pageInfo">Page 1</span>
-    <button id="nextBtn" class="ghost">Next</button>
+    <section class="pager">
+      <button id="prevBtn" class="ghost">Prev</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextBtn" class="ghost">Next</button>
+    </section>
   </section>
 </main>
 
+<footer class="footer">
+  <div class="container">
+    <p class="muted small">© <span id="y"></span> Z06 Finder. Not affiliated with GM or Chevrolet. For demo purposes.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 <script src="/app.js"></script>
 </body>
 </html>
+
